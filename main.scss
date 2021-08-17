@@ -1,0 +1,245 @@
+* {
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$gray-bg : #333333;
+$white : #fff;
+$blue-hue : #016468;
+
+
+@mixin flex-center($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin responsive1000 {
+    @media (max-width : 1000px) {
+        @content;
+    }
+}
+
+@mixin responsive600 {
+    @media (max-width : 600px) {
+        @content;
+    }
+}
+
+body {
+    background-color: $gray-bg;
+    @include flex-center(row);
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    margin: 40px;
+    background-color: $white;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    @include responsive1000 {
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .left-area  {
+        background-color: $blue-hue;
+        position: relative;
+        padding: 40px; 
+        .profile {
+            position: relative;
+            @include flex-center(column);
+            padding-bottom: 20px;
+            border-bottom: 1px solid $white;
+            color: $white;
+            .img-container {
+                position: relative;
+                height: 200px;
+                width: 200px; 
+                overflow: hidden;
+                border-radius: 50%;
+                margin-bottom: 10px;
+                img {
+                    width: inherit;
+                    height: auto;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    object-fit: center;
+                }
+            }
+            h1 {
+                font-size: 1.5em;
+                font-weight: 600;
+                line-height: 1.4em;
+                text-transform: uppercase;
+                text-align: center;
+                span {
+                    font-size: .8em;
+                    font-weight: 200;
+                }
+            }
+        }
+        .contact {
+            position: relative;
+            padding-top: 40px;
+            color: $white;
+            h3 {
+                text-transform: uppercase;
+                font-weight: 600;
+                margin-bottom: 20px;
+            }
+            ul {
+                position: relative;
+                li {
+                    position: relative;
+                    list-style: none;
+                    margin: 10px 0;
+                    font-size: .8em;
+                    .icon {
+                        display: inline-block;
+                        width: 30px;
+                        font-size: 1em;
+                        color: lighten($blue-hue, 25%);
+
+                    }
+                }
+            }
+        }
+        .education {
+            @extend .contact;
+            padding: 40px 0;
+            ul {
+                padding: 10px 0;
+                h3 {
+                    margin-bottom: 0px;
+                    color: lighten($blue-hue, 25%);
+                }
+                h2{
+                    font-weight: 400;
+                }
+                .school {
+                    margin-bottom: 20px;
+                }
+            }
+            
+        }
+    }
+    .right-area  {
+        background-color: $white;
+        position: relative;
+        padding: 40px;
+
+        .about {
+            margin-bottom: 20px;
+            .title {
+                text-transform: uppercase;
+                color: $blue-hue;
+            }
+            p {
+                color: $gray-bg;
+            }   
+            
+        }
+        .resume-obj {
+            @extend .about;
+            .logos {
+                width: 80%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+                img {
+                    max-width: 70px;
+                    margin: 0 15px;
+                }
+                
+            }
+            h5 {
+                text-transform: capitalize;
+                color: $blue-hue;
+                font-weight: 400;
+                font-size: .8em;
+            }
+            a {
+                color: inherit;
+                text-decoration: underline;
+            }
+        }
+        .experience {
+            @extend .about;
+            
+            .box {
+                display: flex;
+                flex-direction: row;
+                margin: 20px 0px;
+                
+                .year_company {
+                    min-width: 150px;
+                    color: $gray-bg;
+                    h3 {
+                        font-size: 1em;
+                        font-weight: 400;
+                        @include responsive600 {
+                            margin-bottom: 5px;
+                        }
+                    }
+                    
+                }
+                .text {
+                    h4 {
+                        color: $blue-hue
+                    }
+                    
+                }
+                @include responsive600 {
+                   flex-direction: column; 
+                }
+            }
+        }
+        .skills {
+            @extend .experience;
+
+            .box {
+                position: relative;
+                width: 100%;
+                display: grid;
+                grid-template-columns: 150px 1fr;
+                justify-content: center;
+                align-items: center;
+                @include responsive600 {
+                    grid-template-columns: repeat(1,1fr); 
+                 }
+                
+                h4 {
+                    color: $gray-bg;
+                    font-weight: 400;
+                }
+                .percent {
+                    position: relative;
+                    width: 100%;
+                    height: 10px;
+                    background-color: #f0f0f0;
+                    .value {
+
+                        position: absolute;
+                        height: 100%;
+                        top: 0;
+                        left: 0; 
+                        background-color: $blue-hue;
+                    }
+                }
+            }
+        }
+
+    }
+}

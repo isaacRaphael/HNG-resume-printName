@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #333333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 1000px;
+  margin: 40px;
+  background-color: #fff;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    margin: 10px;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.container .left-area {
+  background-color: #016468;
+  position: relative;
+  padding: 40px;
+}
+
+.container .left-area .profile {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+
+.container .left-area .profile .img-container {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.container .left-area .profile .img-container img {
+  width: inherit;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: center;
+     object-fit: center;
+}
+
+.container .left-area .profile h1 {
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 1.4em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.container .left-area .profile h1 span {
+  font-size: .8em;
+  font-weight: 200;
+}
+
+.container .left-area .contact, .container .left-area .education {
+  position: relative;
+  padding-top: 40px;
+  color: #fff;
+}
+
+.container .left-area .contact h3, .container .left-area .education h3 {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.container .left-area .contact ul, .container .left-area .education ul {
+  position: relative;
+}
+
+.container .left-area .contact ul li, .container .left-area .education ul li {
+  position: relative;
+  list-style: none;
+  margin: 10px 0;
+  font-size: .8em;
+}
+
+.container .left-area .contact ul li .icon, .container .left-area .education ul li .icon {
+  display: inline-block;
+  width: 30px;
+  font-size: 1em;
+  color: #02dde6;
+}
+
+.container .left-area .education {
+  padding: 40px 0;
+}
+
+.container .left-area .education ul {
+  padding: 10px 0;
+}
+
+.container .left-area .education ul h3 {
+  margin-bottom: 0px;
+  color: #02dde6;
+}
+
+.container .left-area .education ul h2 {
+  font-weight: 400;
+}
+
+.container .left-area .education ul .school {
+  margin-bottom: 20px;
+}
+
+.container .right-area {
+  background-color: #fff;
+  position: relative;
+  padding: 40px;
+}
+
+.container .right-area .about, .container .right-area .resume-obj, .container .right-area .experience, .container .right-area .skills {
+  margin-bottom: 20px;
+}
+
+.container .right-area .about .title, .container .right-area .resume-obj .title, .container .right-area .experience .title, .container .right-area .skills .title {
+  text-transform: uppercase;
+  color: #016468;
+}
+
+.container .right-area .about p, .container .right-area .resume-obj p, .container .right-area .experience p, .container .right-area .skills p {
+  color: #333333;
+}
+
+.container .right-area .resume-obj .logos {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .right-area .resume-obj .logos:first-child {
+  margin-left: 0;
+}
+
+.container .right-area .resume-obj .logos img {
+  max-width: 70px;
+  margin: 0 15px;
+}
+
+.container .right-area .resume-obj h5 {
+  text-transform: capitalize;
+  color: #016468;
+  font-weight: 400;
+  font-size: .8em;
+}
+
+.container .right-area .resume-obj a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.container .right-area .experience .box, .container .right-area .skills .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 20px 0px;
+}
+
+.container .right-area .experience .box .year_company, .container .right-area .skills .box .year_company {
+  min-width: 150px;
+  color: #333333;
+}
+
+.container .right-area .experience .box .year_company h3, .container .right-area .skills .box .year_company h3 {
+  font-size: 1em;
+  font-weight: 400;
+}
+
+@media (max-width: 600px) {
+  .container .right-area .experience .box .year_company h3, .container .right-area .skills .box .year_company h3 {
+    margin-bottom: 5px;
+  }
+}
+
+.container .right-area .experience .box .text h4, .container .right-area .skills .box .text h4 {
+  color: #016468;
+}
+
+@media (max-width: 600px) {
+  .container .right-area .experience .box, .container .right-area .skills .box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.container .right-area .skills .box {
+  position: relative;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 150px 1fr;
+      grid-template-columns: 150px 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 600px) {
+  .container .right-area .skills .box {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.container .right-area .skills .box h4 {
+  color: #333333;
+  font-weight: 400;
+}
+
+.container .right-area .skills .box .percent {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background-color: #f0f0f0;
+}
+
+.container .right-area .skills .box .percent .value {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #016468;
+}
+/*# sourceMappingURL=main.css.map */
