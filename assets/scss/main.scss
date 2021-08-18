@@ -139,8 +139,15 @@ body {
             margin-bottom: 20px;
             display: flex;
             align-items: center;
+            
             span {
                 margin :0 5px;
+                a {
+                   color: $blue-hue;
+                   text-decoration: underline;
+                   font-size: 1em;
+                   cursor: pointer; 
+                }
             }
 
                 a {  
@@ -158,6 +165,7 @@ body {
                         border-radius: 15px;
                         color: $white;
                         transition: transform .3s ease;
+                        cursor: pointer;
 
                         &:hover {
                             transform: scale(1.05);
