@@ -135,6 +135,37 @@ body {
         background-color: $white;
         position: relative;
         padding: 40px;
+        .np-link {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            span {
+                margin :0 5px;
+            }
+
+                a {  
+                    
+                    text-decoration: none;
+                    button {
+                        font-size: .8em;
+                        font-weight: 400;
+                        margin-left: 10px;
+                        padding: 10px 15px;
+                        outline: none;
+                        background-color: $blue-hue;
+                        width: 100%;
+                        border: none;
+                        border-radius: 15px;
+                        color: $white;
+                        transition: transform .3s ease;
+
+                        &:hover {
+                            transform: scale(1.05);
+                        }
+                    }
+                }
+        
+        }
 
         .about {
             margin-bottom: 20px;

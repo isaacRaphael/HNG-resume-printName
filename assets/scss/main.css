@@ -160,6 +160,46 @@ body {
   padding: 40px;
 }
 
+.container .right-area .np-link {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .right-area .np-link span {
+  margin: 0 5px;
+}
+
+.container .right-area .np-link a {
+  text-decoration: none;
+}
+
+.container .right-area .np-link a button {
+  font-size: .8em;
+  font-weight: 400;
+  margin-left: 10px;
+  padding: 10px 15px;
+  outline: none;
+  background-color: #016468;
+  width: 100%;
+  border: none;
+  border-radius: 15px;
+  color: #fff;
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+}
+
+.container .right-area .np-link a button:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
 .container .right-area .about, .container .right-area .resume-obj, .container .right-area .experience, .container .right-area .skills {
   margin-bottom: 20px;
 }
